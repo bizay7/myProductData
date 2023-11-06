@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TreeModule } from 'primeng/tree';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { ProductService } from './product.service';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   imports: [
@@ -13,8 +17,12 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     TreeModule,
     HttpClientModule,
+    ButtonModule,
+    RouterModule,
+    FormsModule,
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
+  providers: [ProductService],
 })
 export class AppModule {}
